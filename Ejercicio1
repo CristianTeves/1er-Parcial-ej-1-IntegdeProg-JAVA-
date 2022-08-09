@@ -1,0 +1,33 @@
+Realizar un programa que permita leer de teclado cinco valores reales entre 100 y -200;
+Luego realizar el siguiente cálculo resultado = ((valor1 * valor2) – (valor3 * valor4)) / valor5;
+y por último imprimir en pantalla el resultado.
+
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+	double resultado=0;
+	double valores[]  = new double [5];
+	Scanner entrada = new Scanner (System.in);
+		
+System.out.println("Ingresar 5 valores reales entre un rango de 100 a -200 para realizar la operacion: ");
+	for (int i = 0; i < 5; i++) {
+			valores[i] = entrada.nextDouble();
+			
+			if(valores[i]<100 && valores[i]>-200) {
+				
+				valores[i] = valores[i];
+			}
+			else {
+System.out.println("Ingresar nuevamente un valor en el rango indicado.");
+				i--;
+			}
+resultado = ((valores[0]* valores[1]) -(valores[2] * valores[3])) / valores[4]; 
+
+System.out.println(resultado);
+			
+	}
+		
+}
